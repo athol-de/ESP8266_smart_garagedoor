@@ -1,5 +1,5 @@
-This project solves a simple problem: you want to know if a door (or window, or gate) is open or not. This project toggles a MQTT topic from false to true in case the door opens, and back.
-The superpower if it is the power consumption. The ESP8266 is not powered up all the time and monitoring a switch, but the switch is the power itself. Meaning: when the ESP is powered, the door is deemed as open, and when the power is shut off, the door is deemed as closed.
+This project solves a simple problem: you want to know if a door (or window, or gate) is open or not. This project toggles a MQTT topic from false to true in case the door opens and back when it closes again.
+The superpower of it is the power consumption. The ESP8266 is not powered up all the time and monitoring a switch, but the switch is the power itself. Meaning: when the ESP is powered, the door is deemed as open, and when the power is shut off, the door is deemed as closed.
 
 *Why the heck this way?*
 
@@ -13,20 +13,18 @@ I'm using a simple feature: MQTT last will. With that you can define a message t
 
 Be aware that in case the ESP looses the connection for any other reasons than powering down, the flag will be "FALSE" even in case of an open door. So if you depend on being on the safe side, you better change to code so that the ESP declares "FALSE" (close) activly, and anything other is declared as "open".
 
-
-
 -----------------------------------------
 HOW TO GET IT UP AND RUNNING
 -----------------------------------------
 
 __hardware you will need__
 
-- 1x ESP8266 (ESP32 will also work, but then you have to figure out the WiFi on your own because it's slightly different)
+- 1x ESP8266 WiFi board, e.g. Wemos D1 mini clone (ESP32 will also work, but then you have to figure out the WiFi on your own because it's slightly different, and it's wasted capability because the task at hand is even far below the capabilities of even the ESP8266)
 - 1x reed contact (NC = normally closed preferred, see above)
 
 __MQTT__
 
-To make MQTT work you have to add your MQTT broker's URL ("mqttServer"), the username ("mqttUsername") and password ("mqttPassword"). You may also want to adjust the topics - by default it's using my structure ("monitor/garagentor").  
+To make MQTT work you have to add your MQTT broker's URL ("mqttServer"), the username ("mqttUsername") and password ("mqttPassword"). You may also want to adjust the topic - by default it's using my structure ("monitor/garagentor").  
 
 __WiFi__
 
