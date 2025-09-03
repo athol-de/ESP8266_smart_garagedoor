@@ -1,4 +1,4 @@
-This project solves a simple problem: you want to know of a door (or window, or gate) is open or not. This project toggles a MQTT topic from false to true in case the door opens, and back.
+This project solves a simple problem: you want to know if a door (or window, or gate) is open or not. This project toggles a MQTT topic from false to true in case the door opens, and back.
 The superpower if it is the power consumption. The ESP8266 is not powered up all the time and monitoring a switch, but the switch is the power itself. Meaning: when the ESP is powered, the door is deemed as open, and when the power is shut off, the door is deemed as closed.
 
 *Why the heck this way?*
