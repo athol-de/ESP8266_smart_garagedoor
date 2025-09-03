@@ -3,9 +3,9 @@ The superpower of it is the power consumption. The ESP8266 is not powered up all
 
 *Why the heck this way?*
 
-Because now you can use a simple NC ("normally closed") reed contact to power the ESP up when the door meets it's final position (if there is any; my garage gate has one). Once the gate is closed again, the power is shut off. This way the ESP consumes power only while the gate is open.
+Because now you can use a simple NC ("normally closed") reed switch to power the ESP up when the door meets it's final position (if there is any; my garage gate has one). Once the gate is closed again, the power is shut off. This way the ESP consumes power only while the gate is open.
 
-Of course you can use a NO ("normally open") reed contact and mount the ESP on the closed door, so power is again enabled when opening the door. Or in case your door is normally open and only closed in rare situations, you might build the code the other way round.
+Of course you can use a NO ("normally open") reed switch and mount the ESP on the closed door, so power is again enabled when opening the door. Or in case your door is normally open and only closed in rare situations, you might build the code the other way round.
 
 *How the heck does that work?*
 
@@ -20,7 +20,7 @@ HOW TO GET IT UP AND RUNNING
 __hardware you will need__
 
 - 1x ESP8266 WiFi board, e.g. Wemos D1 mini clone (ESP32 will also work, but then you have to figure out the WiFi on your own because it's slightly different, and it's wasted capability because the task at hand is even far below the capabilities of even the ESP8266)
-- 1x reed contact (NC = normally closed preferred, see above)
+- 1x reed switch (NC = normally closed preferred, see above)
 
 __MQTT__
 
