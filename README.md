@@ -20,7 +20,7 @@ HOW TO GET IT UP AND RUNNING
 __hardware you will need__
 
 - 1x ESP8266 WiFi board, e.g. Wemos D1 mini clone (ESP32 will also work, but then you have to figure out the WiFi on your own because it's slightly different, and it's wasted capability because the task at hand is even far below the capabilities of even the ESP8266)
-- 1x reed switch (NC = normally closed preferred, see above)
+- 1x reed switch (NC = normally closed or NO = normally open, depends on your installation environment, see above)
 
 __MQTT__
 
