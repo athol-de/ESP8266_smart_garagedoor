@@ -1,7 +1,7 @@
 This project solves a simple problem: you want to know if a door (or window, or gate) is open or not. This project toggles a MQTT topic from false to true in case the door opens and back when it closes again.
 The superpower of it is the power consumption. The ESP8266 is not powered up all the time and monitoring a switch, but the switch is the power itself. Meaning: when the ESP is powered, the door is deemed as open, and when the power is shut off, the door is deemed as closed.
 
-![opening gate in a short video](smartgarage.mp4)
+![opening gate in a animated GIF](smartgarage.gif)
 
 *Why the heck this way?*
 
@@ -23,6 +23,10 @@ __hardware you will need__
 
 - 1x ESP8266 WiFi board, e.g. Wemos D1 mini clone (ESP32 will also work, but then you have to figure out the WiFi on your own because it's slightly different, and it's wasted capability because the task at hand is even far below the capabilities of even the ESP8266)
 - 1x reed switch (NC = normally closed or NO = normally open, depends on your installation environment, see above)
+
+![gate closed, ESP off](door_closed.jpg)
+
+![gate open, ESP on](door_open.jpg)
 
 Open the garagedoor.c code in your favorite IDE (e.g. Arduino IDE).
 
