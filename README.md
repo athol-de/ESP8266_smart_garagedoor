@@ -1,6 +1,8 @@
 This project solves a simple problem: you want to know if a door (or window, or gate) is open or not. This project toggles a MQTT topic from false to true in case the door opens and back when it closes again.
 The superpower of it is the power consumption. The ESP8266 is not powered up all the time and monitoring a switch, but the switch is the power itself. Meaning: when the ESP is powered, the door is deemed as open, and when the power is shut off, the door is deemed as closed.
 
+![opening gate in a short video](smartgarage.mp4)
+
 *Why the heck this way?*
 
 Because now you can use a simple NC ("normally closed") reed switch to power the ESP up when the door meets it's final position (if there is any; my garage gate has one). Once the gate is closed again, the power is shut off. This way the ESP consumes power only while the gate is open.
