@@ -34,9 +34,9 @@ __MQTT__
 
 To make MQTT work you have to add your MQTT broker's URL ("mqttServer"), the username ("mqttUsername") and password ("mqttPassword"). You may also want to adjust the topic - by default it's using my structure ("monitor/garagentor").  
 
-__OTA__
+__OTA (Over the air updates)__
 
-The firmware will work fine without any further changes to the code - it will raise errors on the serial console (without consequences), so if you don't want to use OTA (yet), you can skip it completely: If your are interested in it in principle (because the device will probably finally be mounted at an inconvenient location for updates), I recommend to at least adjust the base URL and let the rest unchanged. You can always put a new firmware version at the base URL later to initiate OTA.
+The firmware will work fine without any further changes to the code - it will raise errors on the serial console (without consequences), so if you don't want to use OTA (yet), you can skip it completely: If you are interested in it in principle (because the device will probably finally be mounted at an inconvenient location for updates), I recommend to at least adjust the base URL and let the rest unchanged. This way you can always put a new firmware version at the base URL later to start using OTA.
 
 Find a file location where you can store the firmware. In my case that's my ioBroker instance, but it can be any URL accessable by the ESP, e.g. a simple file server. It can even be on the internet, but I do not recommend that, because anybody can access it if he knows the URL, and although it's an compiled BIN file, it contains at least your MQTT credentials. And as the ESP8266 is not capable of SSL, it must be an unprotected HTTP URL. So handle with care! Something locally on your LAN is recommended.
 
