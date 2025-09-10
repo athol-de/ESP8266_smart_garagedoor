@@ -11,9 +11,9 @@ Of course you can use a NO ("normally open") reed switch and mount the ESP on th
 
 *How the heck does that work?*
 
-I'm using a simple feature: MQTT last will. With that you can define a message that will be sent to the MQTT broker once the connection got lost (in fact, the broker stores it from the beginning and sends it himself). So here we actively send the "TRUE" (door open) and define the "FALSE" (door closed) as last will. Once the ESP looses the connection, the last will will be executed. Smart, isn't it?
+I'm using a simple feature: MQTT last will. With that you can define a message that will be sent to the MQTT broker once the connection got lost (in fact, the broker stores it from the beginning and sends it itself). So here we actively send the "TRUE" (door open) and define the "FALSE" (door closed) as last will. Once the ESP looses the connection, the last will will be executed. Smart, isn't it?
 
-Be aware that in case the ESP looses the connection for any other reasons than powering down, the flag will be "FALSE" even in case of an open door. So if you depend on being on the safe side, you better change to code so that the ESP declares "FALSE" (close) activly, and anything other is declared as "open".
+Be aware that in case the ESP looses the connection for any other reasons than powering down, the flag will be "FALSE" even in case of an open door. So if you depend on being on the safe side, you better change the code so that the ESP declares "FALSE" (close) activly, and anything other is declared as "open".
 
 -----------------------------------------
 HOW TO GET IT UP AND RUNNING
